@@ -11,7 +11,7 @@ export interface Offers {
 }
 
 export interface PropertyProps {
-  [x: string]: Key | null | undefined;
+  id: number;
   name: string;
   address: Address;
   rating: number;
@@ -32,6 +32,6 @@ export interface PropertyCardProps {
   id: number;
   name: string;
   image: string;
-  price: string;
+  price: number; 
   rating: number;
 }

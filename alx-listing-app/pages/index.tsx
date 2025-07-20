@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Pill from "@/components/common/Pill";
 import PropertyCard from "@/components/common/PropertyCard";
-import { FILTERS, PROPERTYLISTINGSAMPLE, HERO_IMAGE } from "@/constants";
+import { PROPERTYLISTINGSAMPLE } from "@/constants";
 
-const HERO_IMAGE = ;
 const filters = ["Top Villa", "Self Checkin", "Beachfront", "Countryside", "City View"];
-const [activeFilter, setActiveFilter] = useState<string>("");
-
 
 const Home = () => {
+  const [activeFilter, setActiveFilter] = useState<string>("");
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -19,8 +18,7 @@ const Home = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[80vh] flex items-center justify-center">
         <Image
-          src={HERO_IMAGE}
-          alt="Hero Background"
+          src="/assets/image1.png" alt="Hero Background"
           layout="fill"
           objectFit="cover"
           className="z-0"
@@ -73,7 +71,3 @@ const Home = () => {
 };
 
 export default Home;
-function useState<T>(arg0: string): [any, any] {
-  throw new Error("Function not implemented.");
-}
-
