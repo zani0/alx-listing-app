@@ -11,6 +11,7 @@ export interface Offers {
 }
 
 export interface PropertyProps {
+  [x: string]: Key | null | undefined;
   name: string;
   address: Address;
   rating: number;
@@ -19,4 +20,18 @@ export interface PropertyProps {
   offers: Offers;
   image: string;
   discount: string;
+}
+
+export interface PillProps {
+  label: string;
+  isActive?: boolean;
+  onClick?: () => void;
+}
+
+export interface PropertyCardProps {
+  id: number;
+  name: string;
+  image: string;
+  price: string;
+  rating: number;
 }
